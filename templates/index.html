@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<style>
+body{
+
+}
+div.text{
+    position: absolute;
+    left: 73%;
+    font-size: 22px;
+    margin-top: 8px;
+}
+header{
+background-color: black;
+color: white;
+height: 80px;
+
+}
+div.message {
+    width: 50%;
+    border-style:solid;
+    border-color: black;
+    margin-top: 5px;
+    font-size: large;
+}
+</style>
+<body>
+    <header>
+    <div class="text">Чатик имени Татьяны Мошкиной <3</div>
+    </header>
+    <center>
+    {% for message in messages %}
+        <div class="message">
+            <p>Пользователь:{{ message.user }}</p>
+            <p>{{ message.message }}</p>
+        </div>
+    {% endfor %}
+    <div class="buttons">
+        <form method="POST" action="">
+        {% csrf_token %}
+        <p>
+            Никнейм:<input type="text" name="user" />
+        </p>
+        <p>
+            Сообщение:<input type="text" name="text" />
+        </p>
+        <p>
+        <input type="submit" value="Отправить">
+        </p>
+        </form>
+    </div>
+    </center>
+</body>
+</html>
