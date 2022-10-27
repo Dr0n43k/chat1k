@@ -19,5 +19,4 @@ from chat import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",v.index),
-    path("all_messages/",v.view_all_messages)
 ]

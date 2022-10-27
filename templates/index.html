@@ -27,18 +27,25 @@ div.message {
     margin-top: 5px;
     font-size: large;
 }
+div.prokrutka{
+width:800px; /* ширина нашего блока */
+height:600px; /* высота нашего блока */
+overflow-y: scroll;
+}
 </style>
 <body>
     <header>
     <div class="text">Чатик имени Татьяны Мошкиной <3</div>
     </header>
     <center>
+    <div class="prokrutka">
     {% for message in messages %}
         <div class="message">
-            <p>Пользователь:{{ message.user }}</p>
+            <p>Пользователь:{{ message.user }} {{ message.time }}</p>
             <p>{{ message.message }}</p>
         </div>
     {% endfor %}
+    </div>
     <div class="buttons">
         <form method="POST" action="">
         {% csrf_token %}
