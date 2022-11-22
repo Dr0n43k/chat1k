@@ -8,58 +8,384 @@
 body{
 
 }
-div.text{
+@media (orientation: landscape) {
+  div.prokrutka {
+width:1000px; /* ширина нашего блока */
+max-height: 600px;
+flex-direction: column-reverse;
+overflow-y: scroll;
+
+}
+    header{
+        height: 80px;
+    border-style: solid;
+border-bottom-right-radius: 20px;
+    color: white;
+    }
+    div.text{
     position: absolute;
-    left: 73%;
+    font-size: 22px;
+    margin-top: 8px;
+}
+    div.user{
+        padding-top: 10px;
+        background: rgb(11,74,0);
+        background: linear-gradient(90deg, rgba(11,74,0,1) 0%, rgba(7,85,9,1) 52%, rgba(0,0,0,1) 100%);
+        color: white;
+        border-top-right-radius: 40px;
+        border-top-left-radius: 40px ;
+    }
+
+
+div.message{
+    width: 70%;
+    border-style:solid;
+    border-color: black;
+    font-size: large;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 40%;
+  height: 50px;
+}
+input.sumbit{
+    background-color: darkgreen;
+    width: 30%;
+}
+input.text{
+    height: 80px;
+}
+
+body{
+    background-image: url("https://mikulski.rocks/wp-content/uploads/2021/12/pixelpond.webp");
+}
+    div.container{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    div.frog{
+        height: 50px;
+        width: 100px;
+        background: rgb(11,74,0);
+        background: linear-gradient(90deg, rgba(11,74,0,1) 0%, rgba(7,85,9,1) 52%, rgba(0,0,0,1) 100%);
+        border-style: solid;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+            div.black{
+        height: 10px;
+        width: 20px;
+        background-color: black;
+        border-style: solid;
+        border-radius: 100px;
+        padding-top: 20px;
+    }
+    div.white{
+        height: 40px;
+        width: 80px;
+        background-color: white;
+        border-style: solid;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        display: none;
+    }
+        div.message:hover ~ div.white{
+        display: block;
+    }
+}
+@media (orientation:portrait) {
+    div.prokrutka {
+width:1000px; /* ширина нашего блока */
+overflow-y: scroll;
+flex-direction: column-reverse;
+height: 1600px;
+overscroll-behavior-y: contain;
+scroll-snap-type: y proximity;
+}
+    div.container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    div.frog{
+        height: 50px;
+        width: 100px;
+        background: rgb(11,74,0);
+        background: linear-gradient(90deg, rgba(11,74,0,1) 0%, rgba(7,85,9,1) 52%, rgba(0,0,0,1) 100%);
+        border-style: solid;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+
+    div.text{
+    position: absolute;
     font-size: 22px;
     margin-top: 8px;
 }
 header{
-background-color: black;
-color: white;
 height: 80px;
-
+    border-style: solid;
+border-bottom-right-radius: 20px;
+    color: white;
 }
-div.message {
-    width: 50%;
+div.message{
+    width: 70%;
     border-style:solid;
     border-color: black;
-    margin-top: 5px;
-    font-size: large;
+    border-radius: 80px;
+    font-size: xxx-large;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-div.prokrutka{
-width:800px; /* ширина нашего блока */
-height:600px; /* высота нашего блока */
-overflow-y: scroll;
+div.buttons{
+    font-size: xxx-large;
+
 }
+input[type="text"] {
+font-size: 36px;
+height: 36px;
+width: 500px;
+}
+input[type="submit"] {
+font-size: 36px;
+height: 36px;
+width: 500px;
+
+}
+    div.user{
+        padding-top: 10px;
+        background: rgb(11,74,0);
+        background: linear-gradient(90deg, rgba(11,74,0,1) 0%, rgba(7,85,9,1) 52%, rgba(0,0,0,1) 100%);
+        color: white;
+        border-top-right-radius: 70px;
+        border-top-left-radius: 70px ;
+    }
+    input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  outline: 0;
+  width: 100%;
+  height: 120px;
+}
+    input.user_inp{
+        height: 100px;
+    }
+input.sumbit{
+    background-color: darkgreen;
+    height: 100px;
+}
+input.text{
+    height: 150px;
+}
+    body{
+    background-image: url("https://mikulski.rocks/wp-content/uploads/2021/12/pixelpond.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    div.black{
+        height: 10px;
+        width: 20px;
+        background-color: black;
+        border-style: solid;
+        border-radius: 100px;
+        padding-top: 20px;
+    }
+    div.white{
+        height: 40px;
+        width: 80px;
+        background-color: white;
+        border-style: solid;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        display: none;
+    }
+    div.message:hover +div.white{
+        display: block;
+    }
+}
+
 </style>
 <body>
     <header>
-    <div class="text">Чатик имени Татьяны Мошкиной <3</div>
+    <div class="text">Chat1k</div>
     </header>
     <center>
-    <div class="prokrutka">
-    {% for message in messages %}
-        <div class="message">
-            <p>Пользователь:{{ message.user }} {{ message.time }}</p>
-            <p>{{ message.message }}</p>
-        </div>
-    {% endfor %}
+    <div class="prokrutka" id="show_chosen_address">
+{#    {% for message in messages %}#}
+{#        <div class="message" >#}
+{#            <div class="user">{{ message.user }}</div>#}
+{#            <p>{{ message.message }}</p>#}
+{#            <p>{{ message.image }}</p>#}
+{#        </div>#}
+{#    {% endfor %}#}
+        <div id="new_massages"></div>
     </div>
     <div class="buttons">
         <form method="POST" action="">
         {% csrf_token %}
         <p>
-            Никнейм:<input type="text" name="user" />
+            <input class="user_inp" type="text" name="user" placeholder="Никнейм" />
         </p>
         <p>
-            Сообщение:<input type="text" name="text" />
+            <input class="text" type="text" name="text" placeholder="Сообщение" />
         </p>
         <p>
-        <input type="submit" value="Отправить">
+        <input class="sumbit" type="submit" value="Отправить"/>
         </p>
         </form>
     </div>
     </center>
+<script>
+    let message_out ="";
+    let i = 0;
+    async function viewMassages() {
+        let response = await fetch('http://127.0.0.1:8000/get_all_massages');
+        result = await response.json();
+        for (let i = 0; i < result.message.length; i++) {
+            //Контейнер с глазами
+             let ushki = document.getElementById('show_chosen_address')
+                    conteiner = document.createElement('div');
+                conteiner.className = "container";
+                conteiner.id = "conteiner" + i;
+                ushki.append(conteiner);
+            //веки лягухи
+                let conteiner1 = document.getElementById('conteiner' + i),
+                    frog = document.createElement('div');
+                frog.className = "frog";
+                frog.id = "frog" + i;
+                conteiner1.append(frog);
+            //веки лягухи 2
+                conteiner1 = document.getElementById('conteiner' + i),
+                    frog = document.createElement('div');
+                frog.className = "frog";
+                frog.id = "frog" + i+"n";
+                conteiner1.append(frog);
+            //белая часть глаз лягухи
+                let white = document.getElementById('frog' + i+"n")
+                    conteiner = document.createElement('div');
+                conteiner.className = "white";
+                conteiner.id = "white" + i+"n";
+                white.append(conteiner);
+            //черная часть глаз лягухи
+                let frog1 = document.getElementById('white' + i+"n"),
+                    black = document.createElement('div');
+                black.className = "black";
+                black.id = "black" + i+"n";
+                frog1.append(black);
+            //белая часть глаз лягухи 2
+                white = document.getElementById('frog' + i)
+                    conteiner = document.createElement('div');
+                conteiner.className = "white";
+                conteiner.id = "white" + i;
+                white.append(conteiner);
+            //черная часть глаз лягухи 2
+                frog1 = document.getElementById('white' + i),
+                    black = document.createElement('div');
+                black.className = "black";
+                black.id = "black" + i;
+                frog1.append(black);
+            //сообщения
+                let div2 = document.getElementById('show_chosen_address'),
+                    number_span2 = document.createElement('div');
+                number_span2.className = "message";
+                number_span2.id = "message" + i;
+                div2.append(number_span2);
+                let messages = document.getElementById('message' + i),
+                    message = document.createElement('div');
+                message.className = 'user';
+                if(result.user[i]===""){
+                message.innerHTML = "Кто-то"
+                }
+                else {
+                message.innerHTML = result.user[i];
+                }
+                messages.append(message)
+                let message1 = document.createElement('p');
+                message1.innerHTML = result.message[i];
+                messages.append(message1);
+                var d = document.getElementById("show_chosen_address");
+                d.scrollTop = d.scrollHeight;
+        }
+    }
+     async function addMessage(){
+        i+=1;
+        let response =await fetch('http://127.0.0.1:8000/get_new_massage');
+        result = await response.json();
+        if(result.message !== message_out){
+            let ushki = document.getElementById('new_massages')
+                    conteiner = document.createElement('div');
+                conteiner.className = "container";
+                conteiner.id = "conteiner" + i;
+                ushki.append(conteiner);
+                let conteiner1 = document.getElementById('conteiner' + i),
+                    frog = document.createElement('div');
+                frog.className = "frog";
+                frog.id = "frog" + i;
+                conteiner1.append(frog);
+                conteiner1 = document.getElementById('conteiner' + i),
+                    frog = document.createElement('div');
+                frog.className = "frog";
+                frog.id = "frog" + i+"n";
+                conteiner1.append(frog);
+                //белая часть глаз лягухи
+                let white = document.getElementById('frog' + i+"n")
+                    conteiner = document.createElement('div');
+                conteiner.className = "white";
+                conteiner.id = "white" + i+"n";
+                white.append(conteiner);
+            //черная часть глаз лягухи
+                let frog1 = document.getElementById('white' + i+"n"),
+                    black = document.createElement('div');
+                black.className = "black";
+                black.id = "black" + i+"n";
+                frog1.append(black);
+            //белая часть глаз лягухи 2
+                white = document.getElementById('frog' + i)
+                    conteiner = document.createElement('div');
+                conteiner.className = "white";
+                conteiner.id = "white" + i;
+                white.append(conteiner);
+            //черная часть глаз лягухи 2
+                frog1 = document.getElementById('white' + i),
+                    black = document.createElement('div');
+                black.className = "black";
+                black.id = "black" + i;
+                frog1.append(black);
+            let div2 = document.getElementById('new_massages'),
+                number_span2 = document.createElement('div');
+            number_span2.className = "message";
+            number_span2.id = "new_message" + i
+            div2.append("beforeend",number_span2);
+            let messages = document.getElementById('new_message'+i),
+                message = document.createElement('div');
+                message.className = 'user';
+                message.innerHTML = result.user;
+                messages.append(message)
+            let  message1 = document.createElement('p');
+            message1.innerHTML = result.message;
+            messages.append(message1);
+            i += 1;
+            message_out = result.message;
+            var d = document.getElementById("show_chosen_address");
+            d.scrollTop = d.scrollHeight;
+
+        }
+    }
+    setTimeout(viewMassages,10);
+    setInterval(addMessage,1000);
+</script>
 </body>
 </html>

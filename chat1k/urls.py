@@ -19,4 +19,6 @@ from chat import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",v.index),
+    path("get_new_massage/", v.get_new_massage),
+    path("get_all_massages/",v.get_all_masseges)
 ]
